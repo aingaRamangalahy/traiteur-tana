@@ -8,6 +8,7 @@ import { EventComponent } from './event/event.component';
 import { ModeComponent } from './mode/mode.component';
 import { ContactComponent } from './contact/contact.component';
 import { DevisFormComponent } from './devis-form/devis-form.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DevisFormComponent } from './devis-form/devis-form.component';
     EventComponent,
     ModeComponent,
     ContactComponent,
-    DevisFormComponent
+    DevisFormComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
