@@ -3,10 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { EventComponent } from './event/event.component';
+import { ModeComponent } from './mode/mode.component';
+import { ContactComponent } from './contact/contact.component';
+import { DevisFormComponent } from './devis-form/devis-form.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    EventComponent,
+    ModeComponent,
+    ContactComponent,
+    DevisFormComponent
   ],
   imports: [
     BrowserModule,
