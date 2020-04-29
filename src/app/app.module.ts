@@ -9,7 +9,7 @@ import { ModeComponent } from './mode/mode.component';
 import { ContactComponent } from './contact/contact.component';
 import { DevisFormComponent } from './devis-form/devis-form.component';
 import { FooterComponent } from './footer/footer.component';
-
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +22,8 @@ import { FooterComponent } from './footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SlickCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,26 +1,79 @@
 <!--about me-->
 <div class="about" id="about">
-    <h1 class="text-center">About me</h1>
+    <h1 class="text-center">Soirée entreprise, cocktail . . . </h1>
+    <h2 class="text-center"> Trouver votre traiteur à Tana pour évènement d’entreprise </h2>
     <div class="about">
-        <div class="container">
-            <div class="row ">            
-                <!--left side--> 
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <img src="../../assets/img/tt_img_bg.jpg" class="img-fluid">
-                    <span class="text-justify">S.Web Developer</span>
-                </div>
-            
-                <div class="col-lg-8 col-md-8 col-sm-12 desc">     
-                    <h3>D.John</h3>
-                    <p>
-                       ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                </div>
+        <div class="container text-center">
+            <div class="row  d-flex align-items-center">            
+                <!--prev item-->
+                <div class="col-1 d-flex align-items-center justify-content-center">
+                    <a href="#carouselExampleIndicators" role="button" data-slide="prev">
+                       <div class="carousel-nav-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink">
+                             <path d="m88.6,121.3c0.8,0.8 1.8,1.2 2.9,1.2s2.1-0.4 2.9-1.2c1.6-1.6 1.6-4.2 0-5.8l-51-51 51-51c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-54,53.9c-1.6,1.6-1.6,4.2 0,5.8l54,53.9z"/>
+                          </svg>
+                       </div>
+                    </a>
+                 </div>
+                 <!-- carousel content --> 
+                 <div class="col-10">
+                    <!--Start carousel-->
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+           
+                       <div class="carousel-inner">
+                          <div class="carousel-item active">
+                             <div class="row">
+                                <div style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/46992/flexfun04.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center">
+                                </div>
+                                <div style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/46992/flexfun02.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center">
+                                </div>
+                                <div style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/46992/flexfun05.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center" class="col-12 col-md d-flex align-items-center justify-content-center">
+                                   <h3>Hi.</h3>
+                                </div>
+                             </div>
+                          </div>
+                          <div class="carousel-item">
+                             <div class="row">
+                                <div style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/46992/flexfun01.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center">
+                                </div>
+                                <div style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/46992/flexfun03.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center">
+                                </div>
+                                <div style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/46992/flexfun06.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center" class="col-12 col-md d-flex align-items-center justify-content-center">
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                    <!--End carousel-->
+                 </div>
+                 <div class="col-1 d-flex align-items-center justify-content-center"><a  href="#carouselExampleIndicators" data-slide="next">
+                    <div class="carousel-nav-icon">
+                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink">
+                          <path d="m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z"/>
+                       </svg>
+                    </div>
+                    </a>
+                 </div>
+
+
+
+                 <!--slick-->
+               
+                    <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig"
+                      (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
+                      (beforeChange)="beforeChange($event)">
+                      
+                      <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+                        <img src="{{ slide.img }}" alt="" width="100%">
+                      </div>
+                    </ngx-slick-carousel>
+                
+                    <button (click)="addSlide()">Add</button>
+                    <button (click)="removeSlide()">Remove</button>
+                    <button (click)="slickModal.slickGoTo(2)">slickGoto 2</button>
+                    <button (click)="slickModal.unslick()">unslick</button>
+                
+                
             </div>
         </div>        
     </div>   
